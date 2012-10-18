@@ -12,5 +12,6 @@ namespace Caddy.Domain.Abstract
         IQueryable<Purchase> Purchases { get; }
         Purchase GetPurchaseByID(int purchaseID);
         IQueryable<Purchase> GetPurchasesByPurchaseState(PurchaseState purchaseState);
+        IQueryable<Purchase> GetPurchasesToSendToMYOB();
     }
 }

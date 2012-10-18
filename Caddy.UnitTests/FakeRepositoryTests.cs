@@ -14,7 +14,7 @@ namespace Caddy.UnitTests
     class FakeRepositoryTests
     {
         [Test]
-        public void TestPurchaseID1_IsAHammer()
+        public void PurchaseID1_IsAHammer()
         {
             //Arrange
             FakePurchasesRepository fakeRepository = new FakePurchasesRepository();
@@ -26,7 +26,7 @@ namespace Caddy.UnitTests
         }
         
         [Test]
-        public void TestPurchaseID1_IsNotACheese()
+        public void PurchaseID1_IsNotACheese()
         {
             //Arrange
             FakePurchasesRepository fakeRepository = new FakePurchasesRepository();
@@ -35,6 +35,17 @@ namespace Caddy.UnitTests
 
             //Assert
             Assert.AreNotEqual(fakeRepository.GetPurchaseByID(1).Desription, "Cheese");
+        }
+
+        [Test]
+        public void CheckNailNeedsToBeSentToMYOB()
+        {
+            //Arrange
+            IPurchasesRepository fakeRepository = new FakePurchasesRepository();
+            //Act
+
+            //Assert
+            Assert.AreEqual(fakeRepository.GetPurchasesToSendToMYOB().First().Desription, "Nail");
         }
     }
 }
