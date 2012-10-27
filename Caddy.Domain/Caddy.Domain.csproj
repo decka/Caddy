@@ -41,9 +41,6 @@
     <Compile Include="Abstract\ISuppliersRepository.cs" />
     <Compile Include="Abstract\IPurchasesRepository.cs" />
     <Compile Include="Abstract\IProjectsRepository.cs" />
-    <Compile Include="Concrete\FakeProjectsRepository.cs" />
-    <Compile Include="Concrete\FakePurchasesRepository.cs" />
-    <Compile Include="Concrete\FakeSuppliersRepository.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\Purchase.cs" />
     <Compile Include="Entities\PurchaseItem.cs" />
@@ -53,7 +50,9 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

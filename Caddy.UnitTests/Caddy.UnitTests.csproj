@@ -39,9 +39,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeRepositoryTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
     </Reference>
