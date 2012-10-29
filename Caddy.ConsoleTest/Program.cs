@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-using Caddy.Domain;
 using Caddy.Domain.Abstract;
+using Caddy.Domain.Concrete;
+using Caddy.Domain.Entities;
 
 namespace Caddy.ConsoleTest
 {
@@ -13,6 +14,7 @@ namespace Caddy.ConsoleTest
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }

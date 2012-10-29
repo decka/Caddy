@@ -39,16 +39,29 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Caddy.Domain\Caddy.Domain.csproj">
       <Project>{8a1c1bd5-168a-4672-bb9c-8cd0578c7e47}</Project>
       <Name>Caddy.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Caddy.Server\Caddy.Server.csproj">
+      <Project>{e426c4d0-75c5-49b8-9dd3-00cd69f6da17}</Project>
+      <Name>Caddy.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Repositories\PurchasesRepositoryTests.cs" />
+    <Compile Include="ServerGodTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

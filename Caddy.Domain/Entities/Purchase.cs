@@ -14,6 +14,7 @@ namespace Caddy.Domain.Entities
         public Project Project { get; set; }
         public string Desription { get; set; }
         public PurchaseState InvState { get; set; }
-        public IList<PurchaseItem> PurchasedItems { get; set; }
+        public IList<PurchaseEntry> PurchaseEntries { get; set; }
+        public string DatabaseKey { get; set; }
     }
 }

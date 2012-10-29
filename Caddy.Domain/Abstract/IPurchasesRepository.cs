@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Caddy.Domain.Abstract
 {
-    public interface IPurchasesRepository
+    public interface IPurchasesRepository : ICanGetAll<Purchase>, ICanGetByID<Purchase>
     {
-        IQueryable<Purchase> Purchases { get; }
-        Purchase GetPurchaseByID(int purchaseID);
-        IQueryable<Purchase> GetPurchasesByPurchaseState(PurchaseState purchaseState);
-        IQueryable<Purchase> GetPurchasesToSendToMYOB();
+        IEnumerable<Purchase> GetByPurchaseState(PurchaseState purchaseState);
+        IEnumerable<Purchase> GetByDatabaseKeys(List<string> databaseKeys);
+        IEnumerable<Purchase> GetByDatabaseKeysAndSendToMYOB(List<string> databaseKeys);
     }
 }

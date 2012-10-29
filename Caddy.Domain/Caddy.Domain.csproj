@@ -38,21 +38,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\ISuppliersRepository.cs" />
     <Compile Include="Abstract\IPurchasesRepository.cs" />
     <Compile Include="Abstract\IProjectsRepository.cs" />
+    <Compile Include="Concrete\MockPurchasesRepository.cs" />
+    <Compile Include="Concrete\PurchasesRepository.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\Purchase.cs" />
-    <Compile Include="Entities\PurchaseItem.cs" />
+    <Compile Include="Entities\PurchaseEntry.cs" />
     <Compile Include="Entities\PurchaseState.cs" />
     <Compile Include="Entities\Supplier.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
